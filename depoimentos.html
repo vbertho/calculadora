@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Depoimentos</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Samsung</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Depoimentos</a>
+                    <a class="nav-link" href="contato.html">Contato</a>
+                    <div class="dropdown">
+                        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Entrar/Registrar</a></li>
+                          <li><a class="dropdown-item" href="#">Meus pedidos</a></li>
+                          <li><a class="dropdown-item" href="#">Meus produtos</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="bg-primary text-light text-center py-5">
+        <h1 class="fw-bold">O que nossos clientes dizem:</h1>
+        <div id="carouselExampleSlidesOnly" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <p class="lead">"O Galaxy Buds é incrível! Ótimo som e cancelamento de ruído excelente!"</p>
+                    <h5>- João Silva</h5>
+                </div>
+                <div class="carousel-item">
+                    <p class="lead">"Uso na academia todos os dias. Super confortável e bateria duradoura."</p>
+                    <h5>- Maria Santos</h5>
+                </div>
+                <div class="carousel-item">
+                    <p class="lead">"Melhor compra que fiz! O som 360° faz muita diferença!"</p>
+                    <h5>- Carlos Oliveira</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h2 class="text-center">Deixe seu depoimento</h2>
+        <form class="w-50 mx-auto mt-3 needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Seu Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Depoimento</label>
+                <textarea class="form-control" id="mensagem" rows="3" placeholder="Escreva seu depoimento aqui" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar Depoimento</button>
+        </form>
+    </div>
+</body>
+        <script>(() => {
+        'use strict'
+      
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+      
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+      
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+      const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+      </script>
+</html>
